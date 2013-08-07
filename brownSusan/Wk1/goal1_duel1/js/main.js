@@ -20,12 +20,12 @@
         for (var i = 0; i < 10; i++)
         {
             //The next two variables determine what the minimum possible damage is for each player
-            var minDamage1 = player1Damage * .5;
-            var minDamage2 = player2Damage * .5;
+            var minDamage1 = playerOneDamage * .5;
+            var minDamage2 = playerTwoDamage * .5;
             
             //The next two variables are picking a random number to reduce from the player's health points
-            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
-            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
+            var f1 = Math.floor(Math.random()*(playerOneDamage-minDamage1)+minDamage1);
+            var f2 = Math.floor(Math.random()*(playerTwoDamage-minDamage2)+minDamage2);
 
             //Subtracting the points determined by the previous random numbers from the player's health.
             playerOneHealth-=f1;
