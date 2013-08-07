@@ -5,15 +5,15 @@
     var playerTwoName = "Batman";
 
     //player damage
-    var playerOneDamage = 50;
-    var playerTwoDamage = 50;
+    var playerOneDamage = 20;
+    var playerTwoDamage = 20;
 
     //player health
     var playerOneHealth = 100;
     var playerTwoHealth = 100;
 
     //initiate round
-    var round=1;
+    var round=0;
 
     function fight(){
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
@@ -53,16 +53,16 @@
     // Function to check the health scores to determine if there is a winner.
     function winnerCheck(){
     	//Setting result to no winner by default. 
+    	//If player one's health and player two's health are less than one then both players are dead.
+    	//Setting the result variable to match the scenario
+    	// If player one's health is less than 1 then player two is the winner and the result is updated appropriately.
+    	// If player two's health is less than 1 then player two is the winner and the result is updated appropriately.
         var result="no winner";
-        //If player one's health and player two's health are less than one then both players are dead.
         if (playerOneHealth<1 && playerTwoHealth<1)
         {
-        	//Setting the result variable to match the scenario
-            result = "You Both Die";
-         // If player one's health is less than 1 then player two is the winner and the result is updated appropriately.
+         result = "You Both Die";
         } else if(playerOneHealth<1){
             result =playerTwoName+" WINS!!!"
-        // If player two's health is less than 1 then player two is the winner and the result is updated appropriately.
         } else if (playerTwoHealth<1)
         {
             result = playerOneName+" WINS!!!"
