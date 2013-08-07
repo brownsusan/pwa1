@@ -6,7 +6,7 @@
 
     //player damage
     var playerOneDamage = 50;
-    var playerTwoDamage = 5 0;
+    var playerTwoDamage = 50;
 
     //player health
     var playerOneHealth = 100;
