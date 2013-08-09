@@ -52,7 +52,14 @@
 
     console.log("1. avg of an array of numbers");
     var avgNumbers = function(arr){
-	    return (arr.sum / arr.length);
+    	
+    	var sum = 0;
+    	
+    	for(i=0, j=arr.length; i<j; i++){
+	    	sum += arr[i];
+    	}
+    	
+	    return sum / arr.length;
     };
 
     console.log('avg number = ', avgNumbers([1,2,3,4,5]));
@@ -114,7 +121,19 @@
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
 
-        //PUT FUNCTION HERE
+        var vowelsInWord = function(word){
+        
+        	var counter = 0;
+        	var wordArr = word.split('');
+        	
+        	for(i=0, j=wordArr.length; i<j; i++){
+        		if(wordArr[i] == 'a' || wordArr[i] == 'e' || wordArr[i] == 'i' || wordArr[i] == 'o' || wordArr[i] == 'u'){
+	        		counter++
+        		}
+        	}
+        	
+	        return counter;
+        }
 
     console.log(vowelsInWord('JavaScript'));
 
