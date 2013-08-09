@@ -141,12 +141,45 @@
 
 
 
-
+/*
+     6.  create a function named 'findNum'
+         - accepts 2 parameters into the function - 1. array of numbers, 2. boolean
+         - if the second parameter being passed is "false" or null then
+             - create an array with all of the odd numbers from
+                the array
+         - else - create an array with all of the even numbers
+            from the array
+         - return the array
+         - console.log the answer outside of the function
+*/
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
+    
 
-        //PUT FUNCTION HERE
+    	
+        var findNum = function(numArray, evenBoolean){
+            var numberArray = [];
+
+        
+	        if(evenBoolean === undefined || evenBoolean){
+		        for(i = 0, j = numArray.length; i<j; i++){
+			        if(numArray[i] % 2 === 0){
+				        numberArray.push(numArray[i]);
+
+			        }
+		        }
+		     }
+		     else{
+			     for(i = 0, j = numArray.length; i<j; i++){
+			        if(numArray[i] % 2 !== 0){
+				        numberArray.push(numArray[i]);
+			        }
+			     }
+	        }
+	        
+		    return numberArray;
+        }
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
