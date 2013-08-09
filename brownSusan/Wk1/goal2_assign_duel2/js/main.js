@@ -66,7 +66,7 @@
         if (playerOne[2]<1 && playerTwo[2]<1)
         {
          result = "You Both Die";
-        } else if(playerOneH[2]<1){
+        } else if(playerOne[2]<1){
             result =playerTwo[0]+" WINS!!!"
         } else if (playerTwo[2]<1)
         {
